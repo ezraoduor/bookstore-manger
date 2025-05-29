@@ -1,6 +1,7 @@
 from lib.models.customer import Customer
 from lib.models.book import Book
 from lib.models.purchase import Purchase
+from lib.db.schema import create_tables
 from datetime import datetime
 
 def seed_customers():
@@ -33,7 +34,6 @@ def seed_books():
 
 def seed_purchases(customers, books):
     print("Seeding purchases...")
-    
     purchases = [
         (customers[0].id, books[0].id, 2),
         (customers[1].id, books[1].id, 1),
@@ -45,6 +45,7 @@ def seed_purchases(customers, books):
         print(f"Recorded purchase ID {p.id} for customer {customer_id} of book {book_id}, quantity {qty}")
 
 def main():
+    create_tables()
     customers = seed_customers()
     books = seed_books()
     seed_purchases(customers, books)

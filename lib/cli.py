@@ -2,6 +2,8 @@ from lib.models.customer import Customer
 from lib.models.book import Book
 from lib.models.purchase import Purchase
 from datetime import datetime
+from lib.db.connection import get_connection
+
 
 def main_menu():
     print("\n=== Bookstore Management System ===")
