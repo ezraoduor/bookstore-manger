@@ -47,26 +47,28 @@ A command-line application for managing a bookstore. This system allows you to m
 
 ---
 
-## How to Run
+### Instalation
 
-### 1. Clone the repository
+## 1. Clone the repository
 
 git clone https://github.com/ezraoduor/bookstore-manger.git
 cd bookstore-manger
 
 ### 2. Set up the environment with Pipenv
-
+```bash
 pipenv install
 pipenv shell
 
+```
+---
 ### 3. Seed the database
-
+```
 python seed.py
-
+```
 ### 4. Run the CLI application
-
+```
 python cli.py
-
+```
 ---
 
 ## Author
